@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Math Quiz</title>
+<body>
+    <script>
+   // created a array of correct and wrong answered math questions
+   var questions = [ 
+   { prompt: "Answer 1 + 1= 2?",
+        answer:true },
+   { prompt: "Do 3 x 3 = 6?",
+      answer:false},
+   { prompt:"Do 9 + 4 = 13?",
+      answer:true},
+     {prompt:"Do 5 x 5 = 25?",
+      answer:true},
+   { prompt:"Do 9 + 1  = 8?",
+   answer: false},
+   { prompt: "Do 10 - 2 = 8?",
+    answer:true},
+   { prompt: "Do 13 - 3 = 26?",
+      answer: false},
+   {prompt: "Do 19-3 = 15? ",
+    answer:false},
+   { prompt:  "Do 39 -6 = 33?",
+     answer:true},
+    { prompt: "Do 68 + 12 = 80?",
+    answer:true}];
+
+  
+    var score = 0;
+// for loop is to check the length of the array
+    for ( var i = 0; i < questions.length; i++){
+
+        // answer is to confirm user response
+        var answer = confirm(questions[i].prompt);
+        
+        // if statement is created to make answer to equals questions
+      if (answer === questions[i].answer)
+        {
+       // incrementing the score to obtain finale score
+         
+          score++;
+       // alert user it math problem is correct
+        alert("Correct!" );
+       }
+      // else alert to prompt whether math problem is wrong
+       else {
+
+        alert("WRONG!");
+      }
+    }
+  // alert user what the final score of how many problems was correct and how many was incorrect
+      alert("You got" +" "+ score + "/" +" " + questions.length);
+
+  
+</script>
+</body>
+</html>
